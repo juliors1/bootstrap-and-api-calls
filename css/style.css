@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Playfair+Display:ital,wght@1,600&display=swap");
+html {
+  box-sizing: border-box;
+}
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after {
+  /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+/* resets font size to be 62.5% of the user preference - 
+   in most browser configurations this will be 10px */
+:root {
+  font-size: 62.5%;
+}
+body {
+  /* Use a system font, if none are available use an available sans-sarif   font */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+  --body-bg: #8a8b9b;
+  --header-bg: #007bbe;
+  --header-text-color: #d8d8d8;
+  background-color: var(--body-bg);
+  --bold: "Kanit", sans-serif;
+  --regular: "Playfair Display", serif;
+}
+body.dark {
+  background-color: red;
+  --header-bg: #143242;
+  --header-text-color: #d8d8d8;
+}
+h1 {
+  background-color: var(--header-bg);
+  color: var(--header-text-color);
+  font-size: 5.5rem;
+  margin: 1.6rem 0;
+  padding: 1.6rem 0;
+  text-align: center;
+  font-family: var(--bold);
+}
+#yeezy {
+  background-color: limegreen;
+}
+#t-swift {
+  background-color: tomato;
+}
+body {
+  /* Use a system font, if none are available use an available sans-sarif   font */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+  --body-bg: #8a8b9b;
+  --tay: linear-gradient(
+    to right top,
+    #d65db1,
+    #e861a2,
+    #f46993,
+    #fc7486,
+    #ff827b,
+    #ff8f73,
+    #ff9d6d,
+    #ffac69,
+    #ffbe66,
+    #ffd166,
+    #ffe469,
+    #f9f871
+  );
+  --ye: linear-gradient(
+    to right top,
+    #0069ff,
+    #0075fe,
+    #007ffc,
+    #0089f9,
+    #0092f4,
+    #009bf1,
+    #00a3eb,
+    #00aae5,
+    #00b3dc,
+    #00b9c9,
+    #00bdad,
+    #00bf8c
+  );
+  --light-dark-btn-bg: linear-gradient(
+    to right top,
+    #22232b,
+    #292b3a,
+    #303241,
+    #373949,
+    #3e4050,
+    #454757,
+    #4b4d5d,
+    #525464,
+    #5a5c6c,
+    #616374,
+    #696b7d,
+    #717385
+  );
+  --header-bg: #007bbe;
+  --header-text-color: #d8d8d8;
+  --btn-text-color: #2a2a2a;
+  --inverted-btn-text-color: #eaeaea;
+  --card-text-color: #3e3e3e;
+  --light-dark-btn-content: "Dark Mode";
+  text-align: center;
+  background-color: var(--body-bg);
+}
+body.dark {
+  --body-bg: #22232b;
+  --tay: linear-gradient(
+    to right top,
+    #440069,
+    #50006e,
+    #5d0072,
+    #690076,
+    #75007a,
+    #8a0073,
+    #9d006c,
+    #ac0064,
+    #bd134f,
+    #c52f39,
+    #c54a22,
+    #be6300
+  );
+  --ye: linear-gradient(
+    to right top,
+    #213555,
+    #213c59,
+    #22425d,
+    #254960,
+    #2a4f63,
+    #264c61,
+    #224860,
+    #1e455e,
+    #173757,
+    #18294e,
+    #1d1941,
+    #210632
+  );
+  --light-dark-btn-bg: linear-gradient(
+    to right top,
+    #444655,
+    #595b6b,
+    #6f7181,
+    #868898,
+    #9ea0b0,
+    #acaebe,
+    #bbbccd,
+    #cacbdc,
+    #d2d4e5,
+    #dadced,
+    #e3e5f6,
+    #ebeeff
+  );
+
+  --header-bg: #143242;
+  --btn-text-color: #eaeaea;
+  --inverted-btn-text-color: #2a2a2a;
+  --card-text-color: #dedede;
+  --light-dark-btn-content: "Light Mode";
+  background-color: var(--body-bg);
+}
+.btn {
+  color: var(--btn-text-color);
+  font-size: 3rem;
+  margin: 10px;
+}
+.btn:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+#lightDarkButton {
+  background-image: var(--light-dark-btn-bg);
+}
+#lightDarkButton:after {
+  border: none;
+  color: var(--inverted-btn-text-color);
+  content: var(--light-dark-btn-content);
+}
+
+#yeezyButton {
+  background-image: var(--ye);
+  border: none;
+}
+#swiftButton {
+  background-image: var(--tay);
+  border: none;
+}
+#yeezy {
+  background-image: var(--ye);
+}
+#t-swift {
+  background-image: var(--tay);
+}
+#containerDiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#containerDiv > div {
+  width: 250px;
+  margin: 20px 10px 0 10px;
+}
+
+.card {
+  color: var(--card-text-color);
+  text-align: left;
+  border: none;
+  font-family: var(--regular);
+}
+.blockquote > p {
+  font-size: 1.8rem;
+}
+.blockquote-footer {
+  color: var(--card-text-color);
+  font-size: 2.4rem;
+  text-align: right;
+  font-family: var(--regular);
+}
